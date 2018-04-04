@@ -9,8 +9,12 @@
     <h1>Articulos</h1>
 
     <ul>
-      <?php foreach ($articles as $title=>$body): ?>
-        <li> <?php echo $title ?>  <span> <?php echo $body ?> </span></li>
+      <?php foreach ($articles as $article): ?>
+        <li>
+          <?php echo $article['title'] ?> 
+          <span>( <?php echo $article['slug'] ?> )</span>
+          <p> <?php echo $article['text'] ?> </p>
+        </li>
       <?php endforeach;?>
     </ul>
   </body>

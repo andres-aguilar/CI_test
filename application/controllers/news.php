@@ -3,7 +3,11 @@
 class News extends CI_Controller {
 
 	public function article()	{
-    $data['title'] = 'Article';
+		$this->load->model('article');
+    $res = $this->article->getArticle();
+
+		$data['title'] = 'News Article';
+    $data['article'] = $res;
 		$this->load->view('details_view', $data);
 	}
 

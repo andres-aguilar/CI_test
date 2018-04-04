@@ -7,5 +7,6 @@
   </head>
   <body>
     <h1>Hola mundo!</h1>
+    <a href="news"> Ver noticias </a>
   </body>
 </html>
