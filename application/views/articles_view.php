@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css") ?>">
     <title><?php echo $title;?></title>
   </head>
   <body>
@@ -11,7 +11,7 @@
     <ul>
       <?php foreach ($articles as $article): ?>
         <li>
-          <?php echo $article['title'] ?> 
+          <?php echo $article['title'] ?>
           <span>( <?php echo $article['slug'] ?> )</span>
           <p> <?php echo $article['text'] ?> </p>
         </li>

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css") ?>">
     <title><?php echo $title;?></title>
   </head>
   <body>
     <h1>Hola mundo!</h1>
-    <a href="news"> Ver noticias </a>
+    <a href="<?php echo base_url() ?>news"> Ver noticias </a>
   </body>
 </html>
