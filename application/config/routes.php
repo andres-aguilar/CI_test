@@ -41,6 +41,7 @@
 
 $route['default_controller'] = "start";
 $route['news'] = "news";
+$route['todos'] = "todos";
 $route['404_override'] = '';
 
 
