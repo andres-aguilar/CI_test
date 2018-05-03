@@ -8,7 +8,7 @@ class News extends CI_Controller {
 
 		$data['title'] = 'News Article';
     $data['article'] = $res;
-		$this->load->view('details_view', $data);
+		$this->load->view('news/details_view', $data);
 	}
 
   public function all() {
@@ -23,6 +23,6 @@ class News extends CI_Controller {
 
     $data['title'] = 'News';
     $data['articles'] = $articles;
-		$this->load->view('articles_view', $data);
+		$this->load->view('news/articles_view', $data);
   }
 }
