@@ -31,6 +31,7 @@
       <div class="mb-2">
         <form v-on:submit='addTask'>
           <div class="form-group">
+            <input type="hidden" name="id" v-model='tasks.id' value="">
             <input type="text" class="form-control" placeholder="New task" v-model='tasks.title'>
           </div>
           <div class="form-group">

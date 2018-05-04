@@ -3,7 +3,7 @@ new Vue({
   data: {
     nameApp: 'TODO App',
     tasks: [
-      {title: 'Default task 1', comment: 'comment1', done: false}
+      {id: Math.random().toString(36).substring(2), title: 'Default task 1', comment: 'comment1', done: false}
     ]
   },
   methods: {
@@ -13,19 +13,30 @@ new Vue({
     addTask: function(e) {
       e.preventDefault();
       if (this.tasks.title != undefined && this.tasks.title != '') {
+        // If not task id, generate a new ID
+        let id = (this.tasks.id == undefined || this.tasks.id == '') ? Math.random().toString(36).substring(2) : this.tasks.id;
+
         this.tasks.push({
+          id,
           title: this.tasks.title,
           comment: this.tasks.comment,
           done: false
         });
+
+        // Reset form fields
         this.tasks.title = '';
         this.tasks.comment = '';
+        this.tasks.id = '';
       }
     },
     updateTask: function(task) {
+      // Get task to edit
       let current_task = this.tasks[this.tasks.indexOf(task)];
+
+      // Fill form fields
       this.tasks.title = current_task.title;
       this.tasks.comment = current_task.comment;
+      this.tasks.id = current_task.id;
 
       this.deleteTask(task);  // Delete task from list
     }
