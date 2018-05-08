@@ -8,14 +8,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="MyPWA" />
-    <link rel="apple-touch-startup-image" href="./img/logo.png" />
-    <link rel="apple-touch-icon" href="./img/logo.png" />
-    <meta name="msapplication-TileImage" content="./img/logo.png" />
+    <link rel="apple-touch-startup-image" href="<?php echo base_url("assets/img/logo.png") ?>" />
+    <link rel="apple-touch-icon" href="<?php echo base_url("assets/img/logo.png") ?>" />
+    <meta name="msapplication-TileImage" content="<?php echo base_url("assets/img/logo.png") ?>" />
     <meta name="msapplication-TileColor" content="#1C5DAB" />
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-    <link rel="icon" type="image/png" href="./img/logo.png" />
-    <link rel="author" type="text/plain" href="./humans.txt" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml" />
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url("assets/img/favicon.ico") ?>" />
+    <link rel="icon" type="image/png" href="<?php echo base_url("assets/img/logo.png") ?>" />
+    <link rel="author" type="text/plain" href="<?php echo base_url("humans.txt") ?>" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="<?php echo base_url("sitemap.xml") ?>" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -28,7 +28,7 @@
     <div id="taskApp">
       <h1 class='text-center'> {{nameApp}} </h1>
       <!-- Add task from -->
-      <div class="mb-2">
+      <div class="">
         <form v-on:submit='addTask'>
           <div class="form-group">
             <input type="hidden" name="id" v-model='tasks.id' value="">
