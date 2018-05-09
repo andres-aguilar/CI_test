@@ -18,7 +18,7 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="<?php echo base_url("sitemap.xml") ?>" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css") ?>">
 
     <title><?php echo $title ?></title>
@@ -38,31 +38,27 @@
             <input type="text" class="form-control" placeholder="Task comment" v-model='tasks.comment'>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary btn-block" value="Add">
+            <input type="submit" class="btn btn-primary btn-block" value="Add task">
           </div>
       </div>
       </form>
       <!-- Tasks table -->
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Done</th>
-            <th>Task name</th>
-            <th>Task comment</th>
-            <th>Delete</th>
-            <th>Modify</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for='task in tasks'>
-            <td> <input type="checkbox" v-model='task.done'> </td>
-            <td> <span v-bind:class='{taskDone: task.done}'>{{task.title}}</span> </td>
-            <td> <span v-bind:class='{taskDone: task.done}'>{{task.comment}}</span> </td>
-            <td> <button v-on:click='deleteTask(task)' class="btn btn-danger"> <i class="far fa-trash-alt"></i> </button> </td>
-            <td> <button v-on:click='updateTask(task)' class="btn btn-success"> <i class="fas fa-pencil-alt"></i> </button> </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table text-center">
+        <div class="table-head grid">
+          <div class="title"> Done </div>
+          <div class="title"> Task name </div>
+          <div class="title"> Task comment </div>
+          <div class="title"> Delete </div>
+          <div class="title"> Modify </div>
+        </div>
+        <div class="table-body grid" v-for='task in tasks'>
+          <div class="text-center"> <input type="checkbox" v-model='task.done'> </div>
+          <div class="text-center"> <span v-bind:class='{taskDone: task.done}'>{{task.title}}</span> </div>
+          <div class="text-center"> <span v-bind:class='{taskDone: task.done}'>{{task.comment}}</span> </div>
+          <div class="text-center"> <button v-on:click='deleteTask(task)' class="btn btn-danger"> <i class="far fa-trash-alt"></i> </button> </div>
+          <div class="text-center"> <button v-on:click='updateTask(task)' class="btn btn-success"> <i class="fas fa-pencil-alt"></i> </button> </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
