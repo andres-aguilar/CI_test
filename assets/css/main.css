@@ -64,7 +64,8 @@ h1 {font-size: 3em}
   outline: 0;
   font-size: 1em;
   border-radius: 5px;
-  padding: 0.5em 0.5em
+  padding: 0.5em 0.5em;
+  cursor: pointer
 }
 
 .btn-primary {
@@ -84,5 +85,6 @@ h1 {font-size: 3em}
 
 .btn-block {
   display: block;
+  border-radius: 0;
   width: 100%;
 }
