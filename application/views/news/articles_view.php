@@ -2,20 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="<?php echo base_url("assets/css/main.css") ?>">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/news.css") ?>">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
     <title><?php echo $title;?></title>
   </head>
   <body>
-    <h1>Articulos</h1>
+      <nav class="nav">
+        <h1>Articulos</h1>
+        <div class="inline float-right">
+          <a href="#"> <i class="fas fa-bell"></i> </a>
+          <a href="#"> <i class="fas fa-sign-out-alt"></i> </a>
+        </div>
+      </nav>
 
-    <ul>
+    <div class="content">
       <?php foreach ($articles as $article): ?>
-        <li>
-          <?php echo $article['title'] ?>
-          <span>( <?php echo $article['slug'] ?> )</span>
-          <p> <?php echo $article['text'] ?> </p>
-        </li>
+      <article class="card top-space lateral-padding">
+          <div class="title">
+            <h2> <?php echo $article['title'] ?> <span class="small-font">( <?php echo $article['slug'] ?> )</span> </h2>
+          </div>
+          <p class="top-space justify small-padding"> <?php echo $article['text'] ?> </p>
+      </article>
       <?php endforeach;?>
-    </ul>
+    </div>
   </body>
 </html>
