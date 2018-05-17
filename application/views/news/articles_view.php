@@ -12,8 +12,8 @@
       <nav class="nav">
         <h1>Articulos</h1>
         <div class="inline float-right">
-          <a href="#"> <i class="fas fa-bell"></i> </a>
-          <a href="#"> <i class="fas fa-sign-out-alt"></i> </a>
+          <a href="#"><i class="fas fa-bell"></i></a>
+          <a href="#"><i class="fas fa-sign-out-alt"></i></a>
         </div>
       </nav>
 
@@ -27,5 +27,13 @@
       </article>
       <?php endforeach;?>
     </div>
+
+    <footer class="footer small-padding small-font top-space">
+      <div class="">
+        <p>Quienes somos?</p>
+        <p>Terminos y condiciones</p>
+        <p>Contacto</p>
+      </div>
+    </footer>
   </body>
 </html>

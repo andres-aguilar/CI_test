@@ -3,7 +3,8 @@
 class Start extends CI_Controller {
 
 	public function index()	{
-		$data['title'] = 'Index';
-		$this->load->view('index_view', $data);
+		$data['title'] = 'Nuestro contenido:';
+
+		$this->layout->view("index_view", $data);
 	}
 }

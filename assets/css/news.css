@@ -21,6 +21,7 @@
 a { color: inherit }
 a:visited { color: inherit }
 
+.title {font-size: 2rem}
 .small-font {font-size: 0.8rem;}
 .large-padding {padding: 10px 15px}
 .lateral-padding {padding: 0 15px}
@@ -63,12 +64,13 @@ body {
 }
 
 .nav h1 {
+  margin-left: 0.5em;
   font-size: 5rem;
   display: inline-block;
 }
 .nav a {
-  font-size: 5rem;
-  margin-right: .2em
+  font-size: 4rem;
+  margin-right: .5em
 }
 
 .card {
@@ -80,4 +82,7 @@ body {
   color: var(--black)
 }
 
-.title {font-size: 2rem}
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+}
